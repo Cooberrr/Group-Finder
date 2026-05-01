@@ -11,7 +11,11 @@ public class GroupMember : User
         _notes = new List<Note>();
     }
     
-    
+    public void JoinGroup(Group group)
+    {
+        group.AddMember(this);
+        Console.WriteLine($"{Name} joined {group.GroupName}.");
+    }
     
     public void MeetingReply(string reply)
     {

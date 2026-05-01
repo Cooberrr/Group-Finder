@@ -5,13 +5,13 @@ public class User
     public int UserID { get; private set; }
     public string Name  { get; private set; }
     public string Email { get; private set; }
-    public string Role { get; private set; }
+    public Role Role { get; private set; }
 
     public User(int userId, string name, string emain, string role)
     {
         UserID = userId;
         Name = name;
-        Emain = emain;
+        Email = emain;
         Role = role;
     }
 

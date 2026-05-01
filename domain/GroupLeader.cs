@@ -12,7 +12,7 @@ public class GroupLeader : GroupMember
     
     public void ApproveMeeting(Meeting meeting)
     {
-        Console.WriteLine($"{Name} approved meeting: {meeting.Title}");
+        Console.WriteLine($"{Name} approved meeting: {meeting.GetDetails().Title}");
     }
     
     public void AssignTask(GroupMember member)
