@@ -13,4 +13,9 @@ public class TA : GroupMember
         Console.WriteLine($"{Name} added {member.Name} to the group.");
     }
     
+    public void RemoveMemberFromGroup(GroupMember member, Group group)
+    {
+        group.RemoveMember(member);
+        Console.WriteLine($"{Name} removed {member.Name} from the group.");
+    }
 }

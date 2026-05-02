@@ -7,18 +7,21 @@ public class User
     public string Email { get; private set; }
     public Role Role { get; private set; }
 
-    public User(int userId, string name, string emain, string role)
+    public User(int userId, string name, string email, Role role)
     {
         UserID = userId;
         Name = name;
-        Email = emain;
+        Email = email;
         Role = role;
     }
 
     // virtual so if prossefor and groupLeader has specail join permissions
     public virtual void JoinGroup(Group group)
     {
-        group.AddMember(this)
+        if (this is GroupMember member)
+        {
+            group.AddMember(member);
+        }
     }
 }
 

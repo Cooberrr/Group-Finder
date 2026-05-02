@@ -11,8 +11,9 @@ public class GroupMember : User
         _notes = new List<Note>();
     }
     
-    public void JoinGroup(Group group)
+    public override void JoinGroup(Group group)    
     {
+        _group = group;
         group.AddMember(this);
         Console.WriteLine($"{Name} joined {group.GroupName}.");
     }
