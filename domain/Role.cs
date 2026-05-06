@@ -2,7 +2,7 @@ namespace GroupMe.domain;
 
 public enum Role
 {
-    GroupMember,
+    Member,
     GroupLeader,
     TA,
     Professor

@@ -51,6 +51,9 @@ namespace GroupMe
             {
                 Console.WriteLine(file);
             }
+
+            ConsoleUI UI = new ConsoleUI();
+            UI.ShowMenu();
         }
     }
 }
